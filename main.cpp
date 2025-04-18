@@ -52,8 +52,8 @@ Matrix4x4 MakeScaleMatrix(const Vector3 &scale) {
   result.m[2][2] = scale.z;
   result.m[2][3] = 0.0f;
   result.m[3][0] = 0.0f;
+  result.m[3][1] = 0.0f;
   result.m[3][2] = 0.0f;
-  result.m[3][3] = 0.0f;
   result.m[3][3] = 1.0f;
 
   return result;
