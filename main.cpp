@@ -1,6 +1,5 @@
 #include <Novice.h>
-#define _USE_MATH_DEFINES
-#include <math.h>
+#include<cmath>
 
 const char kWindowTitle[] = "LE2B_27_ヤマダ_ナオ_1_0_確認課題";
 
@@ -55,13 +54,13 @@ Matrix4x4 MakeOrthographicMatrix(float left, float top, float right,
 Matrix4x4 MakePerspectiveFovMatrix(float fovY, float aspectRatio,
                                    float nearClip, float farClip) {
   Matrix4x4 result;
-  result.m[0][0] = 1.0f / aspectRatio * 1.0f / tanf(fovY / 2.0f);
+  result.m[0][0] = 1.0f / aspectRatio * 1.0f / std::tan(fovY / 2.0f);
   result.m[0][1] = 0.0f;
   result.m[0][2] = 0.0f;
   result.m[0][3] = 0.0f;
 
   result.m[1][0] = 0.0f;
-  result.m[1][1] = 1.0f / tanf(fovY / 2.0f);
+  result.m[1][1] = 1.0f / std::tan(fovY / 2.0f);
   result.m[1][2] = 0.0f;
   result.m[1][3] = 0.0f;
 
